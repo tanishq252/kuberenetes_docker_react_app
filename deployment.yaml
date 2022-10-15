@@ -1,0 +1,42 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dockerreact
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dockerreact
+  template:
+    metadata:
+      labels:
+        app: dockerreact
+    spec:
+      containers:
+      - name: dockerreact
+        image: tandan/dockerreact:1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "300m"
+          limits:
+            memory: "200Mi"
+            cpu: "600m"
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: dockerreact
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 31010
+  selector:
+    app: dockerreact
