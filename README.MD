@@ -74,7 +74,7 @@ If you get the same result as the below image the service for the container has 
 
 Further you can refer to official documentation of Kubernetes to understand how we can have environment variables whenever working with applications using database.
 
-To see how yaml files of mongo db based application has to be refer code from this repository: https://github.com/tanishq252/kubernetes-mongo-app-deployment
+To see how yaml files of mongo db based application, refer code from this repository: https://github.com/tanishq252/kubernetes-mongo-app-deployment
 
 Happy Coding :)
 
