@@ -31,6 +31,7 @@ Follow further steps to create pods of the docker image and orchestrate them usi
             kubectl apply -f deployment.yaml
   
 If you get the same result as the below image the service for the container has been created and pods for the container will start running!
+
 ![image](https://user-images.githubusercontent.com/78098329/195972610-c863b8f4-74c9-4ffe-a332-d00715d0ec7d.png)
 
 - Run this command to ensure that pods for our container are running successfully
